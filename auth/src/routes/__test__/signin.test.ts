@@ -16,7 +16,7 @@ it('It succeeds when a valid existing user tries to sign in', async () => {
       email: 'test5@test.com',
       password: 'password',
     })
-    .expect(201);
+    .expect(200);
 });
 
 it('It response with a cookie when given valid credentials', async () => {
@@ -34,7 +34,7 @@ it('It response with a cookie when given valid credentials', async () => {
       email: 'test6@test.com',
       password: 'password',
     })
-    .expect(201);
+    .expect(200);
 
   expect(response.get('Set-Cookie')).toBeDefined();
 });
